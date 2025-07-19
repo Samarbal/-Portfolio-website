@@ -1,0 +1,358 @@
+/* Base style */
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+/* Seacrch about how ro make the full background graident color           *****************  */
+
+
+body{
+    line-height: 1.6;
+    
+    color: #333;
+    padding-top: 0px ;
+    
+     /* Gradient background */
+  background: linear-gradient(to right, #dba7fa, #e7d9f1);
+  min-height: 100vh;
+
+  /* linear-gradient(to right, #0e213f, #502274);
+→ This creates a smooth horizontal transition from dark blue to purple.
+
+min-height: 100vh;
+→ Ensures it fills the full height of the screen, even if there's not much content. */
+}
+ 
+/* nav bar  */
+.header{                           /* make it in to top of the page */
+    position:fixed;
+    width: 100%;
+    top:0;
+    background-color: #0e213f;
+    padding: 20px 40px;
+   
+    
+   
+    z-index: 1000 ;
+    box-shadow: 0 4px 6px rgba(0,0,0, 0.1);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* logo left, nav right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20rem; 
+  }
+
+.logo {
+    color: #935aa0;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /* nav list */
+nav ul{
+    display: flex;          /* flex put them in one line*/
+    list-style: none;
+    gap:100px ; 
+} 
+
+nav ul li a {
+    color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+
+}
+
+nav ul li a:hover {
+    color:  #935aa0;
+  }
+
+
+
+  /*  Style the sections as overall   */
+section {
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+h2 {
+    font-size: 40px;
+    color: #0e213f;
+    margin-bottom: 20px;
+  }
+  
+p {
+    font-size: 18px ;
+    max-width: 800px;
+    color:#333;
+  }
+
+/* Home section  */
+.home_section{
+    
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home_section h1{
+    font-size: 50px ;
+    color: #0e213f;
+    margin-bottom: 20px;
+}
+.home_section p {
+   
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Center the text with spacing */
+    color: #333;
+  }
+  
+  /* button style  */
+.home_section .btn {
+    display: inline-block;
+    background-color: #935aa0;
+    color: #0e213f;
+    padding: 12px 25px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease ;
+  }
+  
+.home_section .btn:hover {
+    background-color: e0ccf5;
+    color: #0e213f ;
+  }
+
+  /* About me section  */
+
+
+.about_section {
+  
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* .about_section h2{
+    font-size: 50px ;
+    color: #0e213f;
+} */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+  margin: auto;
+
+}
+
+.about-paragraph .highlight{
+    color: #935aa0;
+    font-weight: 600;
+}
+
+
+.about-cta {
+    font-size: 1rem;
+    color: #935aa0;
+    font-weight: 500;
+}
+
+  /* Skills section  */
+    /* عرضهم في boxes  */
+.skill_section{
+    text-align: center;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: auto;
+    
+}
+
+.skill_section h2 {
+    font-size: 40px;
+    color: #0e213f;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+/* Layout skill cards side-by-side using flexbox */
+.skill_section .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+/*  Skill card  */
+.skill-card {
+    width: 500px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #eadcf8;
+    box-shadow:  0 4px 20px -2px hsl(215, 25%, 70%, 0.15);
+    border: 1px solid hsl(215, 15%, 88%, 0.5);
+    transition: all 0.3s ease ; 
+}
+
+.skill-card:hover {
+    
+    box-shadow: 0 8px 30px -4px hsl(215, 25%, 60%, 0.25);
+    transform: translateY(-5px);
+}
+
+
+.skill_section .skill-title{
+    font-size: 26px ;
+    color: #0e213f;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+/* skills items inside the each card  */
+.skill-card  .skill-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.skill-item {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #935aa0;
+    border: 1px solid hsl(215, 15%, 88%, 0.3);
+    transition: all 0.3s ease ;
+}
+
+.skill-item:hover {
+    border-color: hsla(302, 81%, 25%, 0.3);
+    background-color: #f6f0fc;
+}
+
+/* Project section  */
+.project_section{
+    
+    text-align: center;
+    padding: 150px 20px; 
+}
+
+.project-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card{
+    width:400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #935aa0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition:  transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #935aa0;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #5e2d79;
+    text-decoration: underline;
+  }
+
+/* Content Section  */
+.content_section{
+   
+    text-align: center;
+    padding: 100px 20px;
+}
+.skill_section h2{
+    font-size: 45px ;
+    color: #0e213f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact_section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+.contact_section a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+
+.contact-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .icon-link {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .icon {
+    width: 35px;
+    height: 35px;
+    filter:opacity(50%);
+  }
+  
+  .icon-link:hover .icon {
+    transform: scale(1.2);
+    filter: opacity(100%);
+  }
+
+
+/* Footer */
+
+  .footer {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid hsl(215, 15%, 88%);
+  }
+  .footer-contact {
+    color: #555356;
+    font-weight: 200;
+    font-size: 14px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  
+  .footer-contact strong {
+    color: #222;
+  }
+  
